@@ -1,0 +1,8 @@
+## Interface: 70000
+## Author: Nonus - https://github.com/Nonus
+## Title: |cffFA2384ya|rSkin
+## Version: 1.0
+## X-Category: Skin
+
+cfg.lua
+core.lua
