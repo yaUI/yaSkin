@@ -1,23 +1,18 @@
 local addon, ns = ...
 local cfg = ns.cfg
-local E, M = unpack(yaCore)
+local E, M = unpack(vCore)
 local _G = _G
 
-if cfg.skinPowerAlt then
-	PlayerPowerBarAlt:ClearAllPoints() 
-	PlayerPowerBarAlt:SetPoint("TOP", UIParent, "TOP", -1, -209)
-	PlayerPowerBarAlt:SetWidth("200")
-	PlayerPowerBarAlt:SetHeight("20")
-	--PlayerPowerBarAlt:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -1, -9)
-end
+if cfg.skinPowerAlt and PlayerPowerBarAlt then
+	E:Wait(1, function()
+		PlayerPowerBarAlt:ClearAllPoints()
+		PlayerPowerBarAlt:SetPoint("CENTER", UIParent, "TOP", -1, -159)
 
-if cfg.moveFPS then
-	FramerateLabel:ClearAllPoints()
-	FramerateLabel:SetPoint("BOTTOM", "UIParent", "BOTTOM", -12, 310)
-end
-
-if cfg.skinExtraButton and IsAddOnLoaded("yaBars") then
-	ExtraBtn_holder:SetPoint("TOP", UIParent, "TOP", -1, 300)
+		PlayerPowerBarAlt:SetScript("OnShow", function()
+			PlayerPowerBarAlt:ClearAllPoints()
+			PlayerPowerBarAlt:SetPoint("CENTER", UIParent, "TOP", -1, -159)
+		end)
+	end)
 end
 
 if cfg.skinChat then
@@ -26,7 +21,7 @@ if cfg.skinChat then
 end
 
 if IsAddOnLoaded("Recount") and cfg.skinRecount then
-	
+
 	local Recount = _G.Recount
 
 	local function SkinFrame(frame)
@@ -92,7 +87,7 @@ if IsAddOnLoaded("Recount") and cfg.skinRecount then
 		self:UnregisterAllEvents()
 		self = nil
 		Recount_MainWindow:ClearAllPoints()
-		Recount_MainWindow:SetPoint("TOPRIGHT", ChatFrame1, "TOPLEFT", -15, 13)
+		Recount_MainWindow:SetPoint("TOPRIGHT", ChatFrame1, "TOPLEFT", -30, 13)
 		Recount_MainWindow:SetSize(270, 160)
 		Recount.db.profile.FrameStrata = "3-MEDIUM"
 		Recount.db.profile.Colors["Window"]["Title"] = { r = 0, g = 0, b = 0, a = 0}
@@ -109,7 +104,7 @@ local function setSkadaDB(db)
 end
 
 if IsAddOnLoaded("Skada") and cfg.skinSkada then
-	
+
 	local Skada = _G.Skada
 
 	hooksecurefunc(Skada.displays['bar'], 'ApplySettings', function(self, win)
@@ -127,10 +122,10 @@ if IsAddOnLoaded("Skada") and cfg.skinSkada then
 		win.db.title.bordertexture = "None"
 		win.db.title.font = "Roboto"
 		win.db.title.height = 18
-		win.db.title.texture = "yaUI"
+		win.db.title.texture = "vUI"
 		win.db.title.color = { r = 0, g = 0, b = 0, a = 0}
 
-		win.db.bartexture = "yaUI"
+		win.db.bartexture = "vUI"
 		win.db.barwidth = 270
 		win.db.barheight = 14
 

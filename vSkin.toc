@@ -1,8 +1,9 @@
 ## Interface: 70000
 ## Author: Nonus - https://github.com/Nonus
-## Title: |cffFA2384ya|rSkin
+## Title: |cffFA2384v|rSkin
 ## Version: 1.0
 ## X-Category: Skin
+## Dependencies: vCore, vMedia
 
 cfg.lua
 core.lua
