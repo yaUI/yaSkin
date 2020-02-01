@@ -1,5 +1,5 @@
 local addon, ns = ...
-local E, M = unpack(vCore)
+local E, M = unpack(yaCore)
 
 local cfg = CreateFrame("Frame")
 --------------
@@ -8,15 +8,15 @@ cfg.skinRecount = true
 cfg.skinSkada = true
 cfg.skinOmen = true
 
-cfg.skinChat = IsAddOnLoaded("vChat")
+cfg.skinChat = IsAddOnLoaded("yaChat")
 cfg.skinPowerAlt = true
 cfg.skinExtraButton = true
 
 cfg.moveFPS = true
 
-cfg.barTexture = M:Fetch("vui", "statusbar")
-cfg.dropTexture = M:Fetch("vui", "backdrop")
-cfg.dropEdgeTexture = M:Fetch("vui", "backdropEdge")
+cfg.barTexture = M:Fetch("yaui", "statusbar")
+cfg.dropTexture = M:Fetch("yaui", "backdrop")
+cfg.dropEdgeTexture = M:Fetch("yaui", "backdropEdge")
 
 cfg.font = M:Fetch("font", "Roboto")
 cfg.fontSize = M:Fetch("font", "size")

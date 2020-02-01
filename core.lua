@@ -1,6 +1,6 @@
 local addon, ns = ...
 local cfg = ns.cfg
-local E, M = unpack(vCore)
+local E, M = unpack(yaCore)
 local _G = _G
 
 if cfg.skinPowerAlt and PlayerPowerBarAlt then
@@ -122,10 +122,10 @@ if IsAddOnLoaded("Skada") and cfg.skinSkada then
 		win.db.title.bordertexture = "None"
 		win.db.title.font = "Roboto"
 		win.db.title.height = 18
-		win.db.title.texture = "vUI"
+		win.db.title.texture = "yaUI"
 		win.db.title.color = { r = 0, g = 0, b = 0, a = 0}
 
-		win.db.bartexture = "vUI"
+		win.db.bartexture = "yaUI"
 		win.db.barwidth = 270
 		win.db.barheight = 14
 
